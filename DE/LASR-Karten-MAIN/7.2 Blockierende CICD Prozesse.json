@@ -1,0 +1,6 @@
+{
+  "number": "7.2",
+  "title": "Blockierende CI/CD Prozesse",
+  "category": "Betrieb und Deployment",
+  "description": "Ist der Arbeitsrhytmus von Teams durch Deployment-Prozesse behindert? Gibt es wichtige Deployment-Reihenfolgen oder \"Freeze-Zeiten\" beim Release? Hängen Backlog-Items oft von anderen Teams ab?"
+}

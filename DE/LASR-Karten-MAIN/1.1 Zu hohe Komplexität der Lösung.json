@@ -1,0 +1,6 @@
+{
+  "number": "1.1",
+  "title": "Zu hohe Komplexität der Lösung",
+  "category": "Softwareloesung",
+  "description": "Hat die Domäne eine sehr hohe Komplexität? Gibt es unüberlegte, schnelle Lösungen oder fehlende Abstraktionen? Komplexität gefährdet den Überblick bzw. Wartbarkeit, Korrektheit, Sicherheit, ..."
+}

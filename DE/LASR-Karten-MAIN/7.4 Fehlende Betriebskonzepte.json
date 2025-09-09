@@ -1,0 +1,6 @@
+{
+  "number": "7.4",
+  "title": "Fehlende Betriebskonzepte",
+  "category": "Betrieb und Deployment",
+  "description": "Gibt es gute Konzepte für Capacity Planning, Backup, Disaster Recovery, (Security-)Alerting, ...? Sind diese Konzepte gut durch Tools unterstützt und breit bekannt bzw. anwendbar?"
+}

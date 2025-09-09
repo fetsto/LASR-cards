@@ -1,0 +1,6 @@
+{
+  "number": "7.1",
+  "title": "Wenig Reife bei Deployment- / Release",
+  "category": "Betrieb und Deployment",
+  "description": "Sind Deployments / Releases teuer oder risikoreich? Sind die CI/CD Prozesse wenig automatisiert oder fehleranfällig? Haben Entwicklungsteams Wissen im Bereich Plattformen und Pipelines?"
+}

@@ -1,0 +1,6 @@
+{
+  "number": "1.2",
+  "title": "Unpassende Lösungs-Strukturierung",
+  "category": "Softwareloesung",
+  "description": "Folgt die Softwarestruktur der Domäne? Sind andere technische oder organisatorische Einflüsse (Conway...) gut aufgegriffen? Falls nicht könnte Wartbarkeit, Zuverlässigkeit etc. leiden"
+}

@@ -1,0 +1,6 @@
+{
+  "number": "5.4",
+  "title": "Brüchige, schwer änderbare Systemteile",
+  "category": "Altsysteme und Altlasten",
+  "description": "Sind Teile der Lösung schlecht dokumentiert, verwoben oder nicht mit (guten) Tests abgedeckt? Treten bei Änderungen unerwartete Seiteneffekte auf? Fehlen Tests zu Qualitätseigenschaften?"
+}
