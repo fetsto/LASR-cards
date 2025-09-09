@@ -1,79 +1,78 @@
 # LASR Cards Repository
 
-## About LASR
+A curated repository for managing the **LASR cards**—supporting tools for the **Lightweight Approach for Software Reviews (LASR)** method.
 
-LASR (Learn, Apply, Study, Review) is a comprehensive review methodology designed to help developers improve their code quality through systematic reflection and learning. The method provides structured guidance for identifying and addressing common coding issues, architectural problems, and technical debt.
+## What is LASR?
 
-For more information about the LASR methodology, visit [lasr-reviews.org](https://lasr-reviews.org).
+LASR (Lightweight Approach for Software Reviews) is a streamlined, community-driven method for performing fast and effective software and architecture reviews. It empowers small teams (often 3–4 people) to identify the most critical quality attributes and risks efficiently—typically within just a few hours. The method is accessible, flexible, and free to use, even in commercial contexts :contentReference[oaicite:0]{index=0}.
 
-## Repository Purpose
+### Key Features of LASR:
+- **Lean and fast**: Initial results are available after a half-day workshop :contentReference[oaicite:1]{index=1}.
+- **Accessible**: No extensive training or documentation required; anyone curious can get started :contentReference[oaicite:2]{index=2}.
+- **Engaging method**: Uses a gamified, card-based moderation style to facilitate discussion and decision-making :contentReference[oaicite:3]{index=3}.
+- **Supportive toolset**: Includes downloadable templates, checklists, cheat sheets, and the all-important LASR cards (available as “Print & Play”) :contentReference[oaicite:4]{index=4}.
 
-This repository maintains the official LASR review cards in multiple languages. These cards serve as quick reference guides during code reviews, helping developers:
+Visit the official LASR site for more details: https://www.lasr-reviews.org/
 
-- Identify common code smells and anti-patterns
-- Apply best practices consistently
-- Learn from systematic review patterns
-- Build better software through continuous improvement
+---
 
-## Structure
+## Why This Repository Exists
 
-The repository is organized by language codes:
+This repository is dedicated to maintaining and organizing the **LASR card decks** in multiple languages and extending their utility through additional packs and themed boosters.
 
-```
-├── DE/                 # German cards
-│   └── LASR-Karten-MAIN/
-├── EN/                 # English cards (planned)
-├── FR/                 # French cards (planned)
-└── ...                 # Additional languages
-```
+### What’s Inside:
+- **Core LASR card decks**, currently available in English and German.
+- **Booster packs** targeting different domains (e.g., performance, security, usability).
+- **Language variants** for broader adoption and accessibility.
 
-Each card is stored as a JSON file containing:
-- Problem identification criteria
-- Solution approaches
-- Best practice recommendations
-- Review checklist items
+### Objectives:
+- Ensure **consistent updates** and version control for LASR cards.
+- Provide a centralized location for **translations**, **localized content**, and domain-specific enhancements.
+- Enable **community contributions**—anyone can add new languages or booster sets via pull requests.
+- Facilitate usage in both physical workshops and digital workshops (printable PDFs, Miro/Mural-compatible formats).
 
-## Card Categories
+---
 
-The cards are numbered and categorized to address different aspects of software development:
+## Getting Started
 
-1. **Solution Complexity** - Managing and reducing unnecessary complexity
-2. **Technical Knowledge** - Addressing knowledge gaps and technical debt
-3. **Code Quality** - Improving readability, maintainability, and performance
-4. **Architecture** - Structural improvements and design patterns
-5. **Testing & Validation** - Ensuring robust and reliable code
+### 1. Browse the Cards  
+Folders include:
+- `cards/en/` — English base deck  
+- `cards/de/` — German base deck  
+- `boosters/` — Domain-specific or thematic booster packs 
 
-## Booster Packs
+### 2. Contribute
+- **Translations**: Add a folder under `lang/<xx>/` with the translated card files.
+- **Boosters**: Submit new domain-specific cards under `boosters/`.
+- All contributions should follow the established naming and formatting conventions.
 
-In addition to the main card deck, specialized booster packs are planned for:
-- Domain-specific patterns
-- Framework-specific best practices
-- Advanced architectural patterns
-- Team collaboration improvements
+---
 
-## Contributing
+## Usage & Workshop Workflow
 
-We welcome contributions to:
-- Translate cards into new languages
-- Improve existing card content
-- Add new cards based on community feedback
-- Develop specialized booster packs
+1. **Select quality attributes** for the review using “Top-5 Challenger” cards.
+2. **Define target levels** (0–100 scale), creating the green baseline in the LASR spider chart :contentReference[oaicite:5]{index=5}.
+3. **Identify risks** using risk cards and plot your system’s current standing against targets.
+4. **Explore deeper analysis**, optionally using additional booster or extension cards to refine focus areas :contentReference[oaicite:6]{index=6}.
+5. Use **cheat sheet** and process diagrams for guidance during the workshop :contentReference[oaicite:7]{index=7}.
 
-Please ensure all contributions maintain the established JSON structure and follow the LASR methodology principles.
+---
 
-## Usage
+## Resources
 
-These cards are designed to be used during:
-- Code reviews
-- Pair programming sessions
-- Technical retrospectives
-- Personal learning and improvement
-- Team training and onboarding
+- Official LASR website: [lasr-reviews.org](https://www.lasr-reviews.org/)
+- LASR community (download area for cards and templates): LASR Community :contentReference[oaicite:8]{index=8}
+- FAQ about LASR, including access to materials and print-on-demand options :contentReference[oaicite:9]{index=9}
 
-## License
+---
 
-This project is licensed under the terms specified in the [LICENSE](LICENSE) file.
+## Licensing & Acknowledgements
 
-## Support
+- LASR is freely available under an open license—materials may be used in commercial and non-commercial settings :contentReference[oaicite:10]{index=10}.
+- Thank you to **Stefan Toth** and **Stefan Zörner** for developing LASR, and to **embarc** for their support :contentReference[oaicite:11]{index=11}.
 
-For questions, suggestions, or more information about implementing LASR in your organization, visit [lasr-reviews.org](https://lasr-reviews.org).
+---
+
+## Contact & Community
+
+Questions or ideas? Reach out via the contact options on the LASR site—especially for download issues or community support :contentReference[oaicite:12]{index=12}.
