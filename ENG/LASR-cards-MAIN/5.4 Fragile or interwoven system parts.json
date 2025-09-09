@@ -1,0 +1,6 @@
+{
+  "number": "5.4",
+  "title": "Fragile or interwoven system parts",
+  "category": "Legacy Systems and Technical Debt",
+  "description": "Does the system suffer from weak structuring, tangled code, bad tests or low coverage? Is the system prone to side effects? Are quality characteristics tested?"
+}

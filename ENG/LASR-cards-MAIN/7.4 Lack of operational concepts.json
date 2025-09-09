@@ -1,0 +1,6 @@
+{
+  "number": "7.4",
+  "title": "Lack of operational concepts",
+  "category": "Operations and Deployment",
+  "description": "Are monitoring, capacity planning, backup, disaster recovery, (security) alerting, ... backed by sound concepts? Are these concepts well supported by tools and widely known or adopted?"
+}

@@ -1,0 +1,6 @@
+{
+  "number": "5.1",
+  "title": "Obstructive legacy solutions",
+  "category": "Legacy Systems and Technical Debt",
+  "description": "Are existing systems or components hindering development? Are they unstable, fragile, tightly coupeled, difficult to integrate or understand? Reliability or maintainability are often affected."
+}

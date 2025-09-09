@@ -1,0 +1,6 @@
+{
+  "number": "7.2",
+  "title": "Blocking CI/CD processes",
+  "category": "Operations and Deployment",
+  "description": "Are teams slowed down or interrupted by deployment processes? Is the release complicated by strict deployment sequences or \"freeze times\"? Do backlog items often depend on other teams?"
+}

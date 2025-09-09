@@ -1,0 +1,6 @@
+{
+  "number": "7.1",
+  "title": "Low maturity in deployment / release",
+  "category": "Operations and Deployment",
+  "description": "Are deployments/releases expensive or risky? Are CI/CD processes poorly automated or error-prone? Do development teams lack knowledge of platforms and pipelines?"
+}

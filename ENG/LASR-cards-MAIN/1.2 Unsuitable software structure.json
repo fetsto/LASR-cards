@@ -1,0 +1,6 @@
+{
+  "number": "1.2",
+  "title": "Unsuitable software structure",
+  "category": "Software Solution",
+  "description": "Is the software structured according to the domain? Does it take other technical and organizatorial influences (Conway...) into account? If not, maintainability, reliability etc. could suffer."
+}

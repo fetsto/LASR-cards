@@ -1,0 +1,6 @@
+{
+  "number": "4.2",
+  "title": "Unstable / unsuitable external systems",
+  "category": "External Systems and Platforms",
+  "description": "Do third-party systems interfere with development or operation? Are external APIs, interfaces, message formats or transport technologies volatile? Are SLAs incompatible?"
+}

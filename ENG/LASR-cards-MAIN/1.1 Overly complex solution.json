@@ -1,0 +1,6 @@
+{
+  "number": "1.1",
+  "title": "Overly complex solution",
+  "category": "Software Solution",
+  "description": "Is the domain particularly complex? Are there any rash or quick solutions? Are abstractions used inadequately? Complexity jeopardizes understandability and in turn maintainability, correctness, ..."
+}

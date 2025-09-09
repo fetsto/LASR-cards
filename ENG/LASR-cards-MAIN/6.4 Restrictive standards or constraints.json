@@ -1,0 +1,6 @@
+{
+  "number": "6.4",
+  "title": "Restrictive standards or constraints",
+  "category": "Organization and Processes",
+  "description": "Are architecture decisions (often) complicated by standards, budget or time constraints? Are there restrictive legal aspects, e.g. relating to data handling or internationalization?"
+}
