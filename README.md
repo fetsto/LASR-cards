@@ -43,7 +43,7 @@ The repository is organized as follows:
 - `main-deck/DE/` — German base deck (32 core risk cards)
 
 **Booster Packs:**
-- `booster-packs/agentic-software-development/` — Cards addressing risks specific to AI agent-based development
+- `booster-packs/agentic-software-development/` — Cards addressing risks specific to AI agent-based development (alias: **AI-coding**)
   - `EN/cards/` — English booster cards
   - `DE/cards/` — German booster cards 
 
@@ -51,19 +51,20 @@ The repository is organized as follows:
 The repository includes a Python script to generate formatted markdown files from the JSON card data:
 
 ```bash
-python3 generate_cards_md.py <input_directory> [output_file]
+python3 generate_cards_md.py <language> <deck> [output_file]
 ```
 
 **Examples:**
 ```bash
 # Generate English main deck cards
-python3 generate_cards_md.py main-deck/EN/LASR-cards-MAIN
+python3 generate_cards_md.py EN main-deck
 
 # Generate German main deck cards
-python3 generate_cards_md.py main-deck/DE/LASR-Karten-MAIN
+python3 generate_cards_md.py DE main-deck
 
-# Generate booster pack cards
-python3 generate_cards_md.py booster-packs/agentic-software-development/EN/cards
+# Generate AI coding booster pack
+python3 generate_cards_md.py EN AI-coding
+python3 generate_cards_md.py DE AI-coding
 ```
 
 The generated markdown includes:

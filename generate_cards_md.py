@@ -1,13 +1,33 @@
 #!/usr/bin/env python3
 """
 Script to generate a markdown file from LASR card JSON files.
+Usage: python generate_cards_md.py <language> <deck> [output_file]
 """
 
 import json
-import os
 import sys
 from pathlib import Path
 from typing import List, Dict
+
+
+# Configuration: Define deck locations and titles
+DECK_CONFIG = {
+    "main-deck": {
+        "path": "main-deck",
+        "titles": {
+            "EN": "LASR Cards - Software Development Risks",
+            "DE": "LASR-Karten - Risiken der Softwareentwicklung"
+        }
+    },
+    "AI-coding": {
+        "path": "booster-packs/agentic-software-development",
+        "subdirs": {"EN": "cards", "DE": "cards"},
+        "titles": {
+            "EN": "LASR Cards - Agentic Software Development Booster Pack",
+            "DE": "LASR-Karten - Agentic Software Development Booster Pack"
+        }
+    }
+}
 
 
 def load_card(filepath: Path) -> Dict:
@@ -27,21 +47,6 @@ def get_chapter_number(cards: List[Dict], category: str) -> int:
                 except ValueError:
                     pass
     return 999
-
-
-def get_category_order(category: str) -> int:
-    """Return sort order for categories."""
-    categories = {
-        "Solution Approach": 1,
-        "Knowledge and Tooling": 2,
-        "Goals and Expectations": 3,
-        "External Systems": 4,
-        "Current Solution": 5,
-        "Organization": 6,
-        "Deployment and Operations": 7,
-        "Team and Communication": 8
-    }
-    return categories.get(category, 999)
 
 
 def sort_cards(cards: List[Dict]) -> List[Dict]:
@@ -118,23 +123,48 @@ def generate_markdown(cards: List[Dict], output_file: Path, title: str = "LASR C
 def main():
     """Main function to process cards and generate markdown."""
 
-    if len(sys.argv) < 2:
-        print("Usage: python generate_cards_md.py <input_directory> [output_file]")
-        print("\nExample:")
-        print("  python generate_cards_md.py main-deck/EN/LASR-cards-MAIN")
-        print("  python generate_cards_md.py main-deck/DE/LASR-Karten-MAIN")
-        print("  python generate_cards_md.py booster-packs/agentic-software-development/EN/cards")
+    if len(sys.argv) < 3:
+        print("Usage: python generate_cards_md.py <language> <deck> [output_file]")
+        print("\nArguments:")
+        print("  language: EN or DE")
+        print("  deck:     main-deck, AI-coding, etc.")
+        print("\nAvailable decks:")
+        for deck_name in DECK_CONFIG.keys():
+            print(f"  - {deck_name}")
+        print("\nExamples:")
+        print("  python generate_cards_md.py EN main-deck")
+        print("  python generate_cards_md.py DE main-deck")
+        print("  python generate_cards_md.py EN AI-coding")
+        print("  python generate_cards_md.py DE AI-coding output.md")
         sys.exit(1)
 
-    input_dir = Path(sys.argv[1])
+    language = sys.argv[1].upper()
+    deck_name = sys.argv[2]
+
+    if language not in ["EN", "DE"]:
+        print(f"Error: Language must be 'EN' or 'DE', got '{language}'")
+        sys.exit(1)
+
+    if deck_name not in DECK_CONFIG:
+        print(f"Error: Unknown deck '{deck_name}'")
+        print(f"Available decks: {', '.join(DECK_CONFIG.keys())}")
+        sys.exit(1)
+
+    # Build the input directory path
+    deck_config = DECK_CONFIG[deck_name]
+    input_dir = Path(deck_config["path"]) / language
+
+    # Add subdirectory if specified in config
+    if "subdirs" in deck_config and language in deck_config["subdirs"]:
+        input_dir = input_dir / deck_config["subdirs"][language]
 
     if not input_dir.exists() or not input_dir.is_dir():
-        print(f"Error: '{input_dir}' is not a valid directory")
+        print(f"Error: Directory '{input_dir}' does not exist")
         sys.exit(1)
 
     # Determine output file
-    if len(sys.argv) >= 3:
-        output_file = Path(sys.argv[2])
+    if len(sys.argv) >= 4:
+        output_file = Path(sys.argv[3])
     else:
         output_file = input_dir / "LASR-cards.md"
 
@@ -146,7 +176,7 @@ def main():
         print(f"No JSON files found in '{input_dir}'")
         sys.exit(1)
 
-    print(f"Found {len(json_files)} card files")
+    print(f"Found {len(json_files)} card files in {input_dir}")
 
     for json_file in json_files:
         try:
@@ -160,20 +190,8 @@ def main():
         print("No cards were successfully loaded")
         sys.exit(1)
 
-    # Determine title based on directory
-    dir_path = str(input_dir)
-    if "/EN/" in dir_path or dir_path.endswith("/EN"):
-        if "agentic-software-development" in dir_path:
-            title = "LASR Cards - Agentic Software Development Booster Pack"
-        else:
-            title = "LASR Cards - Software Development Risks"
-    elif "/DE/" in dir_path or dir_path.endswith("/DE"):
-        if "agentic-software-development" in dir_path:
-            title = "LASR-Karten - Agentic Software Development Booster Pack"
-        else:
-            title = "LASR-Karten - Risiken der Softwareentwicklung"
-    else:
-        title = "LASR Cards"
+    # Get title from config
+    title = deck_config["titles"].get(language, "LASR Cards")
 
     # Generate markdown
     generate_markdown(cards, output_file, title)

@@ -5,34 +5,44 @@ This script converts LASR card JSON files into a formatted markdown document.
 ## Usage
 
 ```bash
-python3 generate_cards_md.py <input_directory> [output_file]
+python3 generate_cards_md.py <language> <deck> [output_file]
 ```
 
 ### Arguments
 
-- `input_directory` (required): Path to the directory containing the card JSON files
-- `output_file` (optional): Path for the output markdown file. If not specified, the file will be created as `LASR-cards.md` in the input directory
+- `language` (required): Language code - `EN` or `DE`
+- `deck` (required): Deck identifier - `main-deck`, `AI-coding`, etc.
+- `output_file` (optional): Path for the output markdown file. If not specified, the file will be created as `LASR-cards.md` in the deck's directory
+
+### Available Decks
+
+The script includes built-in configuration for the following decks:
+- `main-deck` - Core LASR risk cards for software development
+- `AI-coding` - Agentic Software Development booster pack
+
+New decks can be added by editing the `DECK_CONFIG` dictionary in the script.
 
 ### Examples
 
-Generate markdown for English main deck cards (output to default location):
+Generate markdown for English main deck cards:
 ```bash
-python3 generate_cards_md.py main-deck/EN/LASR-cards-MAIN
+python3 generate_cards_md.py EN main-deck
 ```
 
-Generate markdown for German main deck cards with custom output path:
+Generate markdown for German main deck cards:
 ```bash
-python3 generate_cards_md.py main-deck/DE/LASR-Karten-MAIN output/german-cards.md
+python3 generate_cards_md.py DE main-deck
 ```
 
-Generate markdown for booster pack cards:
+Generate markdown for AI coding booster pack:
 ```bash
-python3 generate_cards_md.py booster-packs/agentic-software-development/EN/cards
+python3 generate_cards_md.py EN AI-coding
+python3 generate_cards_md.py DE AI-coding
 ```
 
 Specify custom output file:
 ```bash
-python3 generate_cards_md.py main-deck/EN/LASR-cards-MAIN docs/cards.md
+python3 generate_cards_md.py EN main-deck docs/english-cards.md
 ```
 
 ## Output Format
