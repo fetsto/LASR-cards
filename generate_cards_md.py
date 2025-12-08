@@ -121,8 +121,9 @@ def main():
     if len(sys.argv) < 2:
         print("Usage: python generate_cards_md.py <input_directory> [output_file]")
         print("\nExample:")
-        print("  python generate_cards_md.py ENG/LASR-cards-MAIN")
-        print("  python generate_cards_md.py ENG/LASR-cards-MAIN output.md")
+        print("  python generate_cards_md.py main-deck/EN/LASR-cards-MAIN")
+        print("  python generate_cards_md.py main-deck/DE/LASR-Karten-MAIN")
+        print("  python generate_cards_md.py booster-packs/agentic-software-development/EN/cards")
         sys.exit(1)
 
     input_dir = Path(sys.argv[1])
@@ -160,10 +161,17 @@ def main():
         sys.exit(1)
 
     # Determine title based on directory
-    if "ENG" in str(input_dir):
-        title = "LASR Cards - Software Development Risks"
-    elif "DE" in str(input_dir):
-        title = "LASR-Karten - Risiken der Softwareentwicklung"
+    dir_path = str(input_dir)
+    if "/EN/" in dir_path or dir_path.endswith("/EN"):
+        if "agentic-software-development" in dir_path:
+            title = "LASR Cards - Agentic Software Development Booster Pack"
+        else:
+            title = "LASR Cards - Software Development Risks"
+    elif "/DE/" in dir_path or dir_path.endswith("/DE"):
+        if "agentic-software-development" in dir_path:
+            title = "LASR-Karten - Agentic Software Development Booster Pack"
+        else:
+            title = "LASR-Karten - Risiken der Softwareentwicklung"
     else:
         title = "LASR Cards"
 

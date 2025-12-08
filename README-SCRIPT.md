@@ -15,33 +15,37 @@ python3 generate_cards_md.py <input_directory> [output_file]
 
 ### Examples
 
-Generate markdown for English cards (output to default location):
+Generate markdown for English main deck cards (output to default location):
 ```bash
-python3 generate_cards_md.py ENG/LASR-cards-MAIN
+python3 generate_cards_md.py main-deck/EN/LASR-cards-MAIN
 ```
 
-Generate markdown for German cards with custom output path:
+Generate markdown for German main deck cards with custom output path:
 ```bash
-python3 generate_cards_md.py DE/LASR-Karten-MAIN output/german-cards.md
+python3 generate_cards_md.py main-deck/DE/LASR-Karten-MAIN output/german-cards.md
+```
+
+Generate markdown for booster pack cards:
+```bash
+python3 generate_cards_md.py booster-packs/agentic-software-development/EN/cards
 ```
 
 Specify custom output file:
 ```bash
-python3 generate_cards_md.py ENG/LASR-cards-MAIN docs/cards.md
+python3 generate_cards_md.py main-deck/EN/LASR-cards-MAIN docs/cards.md
 ```
 
 ## Output Format
 
 The generated markdown file includes:
 
-1. **Title** - Automatically determined based on the input directory (English/German)
-2. **Table of Contents** - Organized by category with links to each card
+1. **Title** - Automatically determined based on the input directory (English/German, main deck/booster pack)
+2. **Table of Contents** - Organized by chapter-numbered categories with links to each card
 3. **Card Details** - Each card displays:
    - Card number and title
-   - Category
    - Description
 
-Cards are automatically sorted by category and number.
+Cards are automatically sorted by chapter number and card number within each chapter.
 
 ## Card JSON Format
 

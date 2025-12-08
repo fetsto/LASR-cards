@@ -35,11 +35,17 @@ This repository is dedicated to maintaining and organizing the **LASR card decks
 
 ## Getting Started
 
-### 1. Browse the Cards  
-Folders include:
-- `en/` — English base deck  
-- `de/` — German base deck  
-- `boosters/` — Domain-specific or thematic booster packs 
+### 1. Browse the Cards
+The repository is organized as follows:
+
+**Main Deck:**
+- `main-deck/EN/` — English base deck (32 core risk cards)
+- `main-deck/DE/` — German base deck (32 core risk cards)
+
+**Booster Packs:**
+- `booster-packs/agentic-software-development/` — Cards addressing risks specific to AI agent-based development
+  - `EN/cards/` — English booster cards
+  - `DE/cards/` — German booster cards 
 
 ### 2. Generate Markdown Documentation
 The repository includes a Python script to generate formatted markdown files from the JSON card data:
@@ -50,11 +56,14 @@ python3 generate_cards_md.py <input_directory> [output_file]
 
 **Examples:**
 ```bash
-# Generate English cards (output to default location)
-python3 generate_cards_md.py EN/LASR-cards-MAIN
+# Generate English main deck cards
+python3 generate_cards_md.py main-deck/EN/LASR-cards-MAIN
 
-# Generate German cards with custom output path
-python3 generate_cards_md.py DE/LASR-Karten-MAIN output/cards.md
+# Generate German main deck cards
+python3 generate_cards_md.py main-deck/DE/LASR-Karten-MAIN
+
+# Generate booster pack cards
+python3 generate_cards_md.py booster-packs/agentic-software-development/EN/cards
 ```
 
 The generated markdown includes:
@@ -65,9 +74,9 @@ The generated markdown includes:
 See [README-SCRIPT.md](README-SCRIPT.md) for detailed usage instructions.
 
 ### 3. Contribute
-- **Translations**: Add a folder under `lang/<xx>/` with the translated card files.
-- **Boosters**: Submit new domain-specific cards under `boosters/`.
-- All contributions should follow the established naming and formatting conventions.
+- **Translations**: Add a new language folder under `main-deck/<LANG>/` or `booster-packs/<pack-name>/<LANG>/` with the translated card files.
+- **Boosters**: Submit new domain-specific booster packs under `booster-packs/<pack-name>/` with `EN/` and `DE/` subdirectories.
+- All contributions should follow the established naming and formatting conventions (JSON format with `number`, `title`, `category`, and `description` fields).
 
 ---
 
