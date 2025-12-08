@@ -41,7 +41,30 @@ Folders include:
 - `de/` — German base deck  
 - `boosters/` — Domain-specific or thematic booster packs 
 
-### 2. Contribute
+### 2. Generate Markdown Documentation
+The repository includes a Python script to generate formatted markdown files from the JSON card data:
+
+```bash
+python3 generate_cards_md.py <input_directory> [output_file]
+```
+
+**Examples:**
+```bash
+# Generate English cards (output to default location)
+python3 generate_cards_md.py EN/LASR-cards-MAIN
+
+# Generate German cards with custom output path
+python3 generate_cards_md.py DE/LASR-Karten-MAIN output/cards.md
+```
+
+The generated markdown includes:
+- Table of contents with chapter-organized categories
+- All cards sorted by chapter and number
+- Clean, readable format suitable for documentation
+
+See [README-SCRIPT.md](README-SCRIPT.md) for detailed usage instructions.
+
+### 3. Contribute
 - **Translations**: Add a folder under `lang/<xx>/` with the translated card files.
 - **Boosters**: Submit new domain-specific cards under `boosters/`.
 - All contributions should follow the established naming and formatting conventions.
