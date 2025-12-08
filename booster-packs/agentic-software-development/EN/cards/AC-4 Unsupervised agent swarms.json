@@ -1,0 +1,6 @@
+{
+  "number": "AC-4",
+  "title": "Unsupervised agent swarms",
+  "category": "Gen-AI Autonomy",
+  "description": "Do autonomous multi-agent chains run without clear limits, supervision or cost controls? Deadlocks, loops and chatty prompt chains can waste compute, spike bills and create brittle dependencies."
+}

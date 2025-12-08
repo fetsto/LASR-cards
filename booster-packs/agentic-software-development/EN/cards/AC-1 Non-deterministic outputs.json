@@ -1,0 +1,6 @@
+{
+  "number": "AC-1",
+  "title": "Non-deterministic outputs",
+  "category": "LLM-usage",
+  "description": "Is the non-deterministic nature of LLMs problematic? Are solutions, tests, traceability or configuration solutions sensitive to small changes or too dependent on structural stability?"
+}

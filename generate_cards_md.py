@@ -63,8 +63,8 @@ def sort_cards(cards: List[Dict]) -> List[Dict]:
     return sorted(cards, key=sort_key)
 
 
-def generate_markdown(cards: List[Dict], output_file: Path, title: str = "LASR Cards"):
-    """Generate a markdown file from the cards."""
+def generate_markdown_main_deck(cards: List[Dict], output_file: Path, title: str):
+    """Generate markdown for main deck with chapter-organized categories."""
 
     # Sort cards
     cards = sort_cards(cards)
@@ -118,6 +118,39 @@ def generate_markdown(cards: List[Dict], output_file: Path, title: str = "LASR C
                 f.write(f"### {number} {card_title}\n\n")
                 f.write(f"{description}\n\n")
                 f.write("---\n\n")
+
+
+def generate_markdown_booster(cards: List[Dict], output_file: Path, title: str):
+    """Generate markdown for booster packs with categories shown per card."""
+
+    # Sort cards by card number
+    cards = sorted(cards, key=lambda x: x.get('number', ''))
+
+    # Generate markdown
+    with open(output_file, 'w', encoding='utf-8') as f:
+        # Title
+        f.write(f"# {title}\n\n")
+
+        # Table of contents
+        f.write("## Table of Contents\n\n")
+        for card in cards:
+            number = card.get('number', '')
+            card_title = card.get('title', '')
+            anchor = f"{number.replace('.', '').replace('-', '').lower()}-{card_title.lower().replace(' ', '-').replace(',', '').replace('&', '').replace('(', '').replace(')', '').replace('/', '')}"
+            f.write(f"- [{number} {card_title}](#{anchor})\n")
+        f.write("\n---\n\n")
+
+        # Cards without category grouping
+        for card in cards:
+            number = card.get('number', '')
+            card_title = card.get('title', '')
+            category = card.get('category', 'Uncategorized')
+            description = card.get('description', '')
+
+            f.write(f"## {number} {card_title}\n\n")
+            f.write(f"**Category:** {category}\n\n")
+            f.write(f"{description}\n\n")
+            f.write("---\n\n")
 
 
 def main():
@@ -193,8 +226,14 @@ def main():
     # Get title from config
     title = deck_config["titles"].get(language, "LASR Cards")
 
-    # Generate markdown
-    generate_markdown(cards, output_file, title)
+    # Generate markdown - use different format for booster packs
+    is_booster = deck_name != "main-deck"
+
+    if is_booster:
+        generate_markdown_booster(cards, output_file, title)
+    else:
+        generate_markdown_main_deck(cards, output_file, title)
+
     print(f"\nMarkdown file generated: {output_file}")
     print(f"Total cards: {len(cards)}")
 
