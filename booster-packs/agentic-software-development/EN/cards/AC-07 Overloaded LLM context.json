@@ -1,5 +1,5 @@
 {
-  "number": "AC-7",
+  "number": "AC-07",
   "title": "Overloaded LLM context",
   "category": "Goals and Context",
   "description": "Do excessive context enrichment, careless information feeding or long-lived memories clutter LLM contexts? Are important rules or principles lost or forgotten during longer coding sessions?"

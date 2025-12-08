@@ -1,5 +1,5 @@
 {
-  "number": "AC-6",
+  "number": "AC-06",
   "title": "Documentation bloat",
   "category": "Gen-AI Autonomy",
   "description": "Is documentation largely auto-generated descriptions of implementation details, managed by LLMs? Is the volume of information so big, that it is hard to maintain and read \"manually\"?"
