@@ -1,4 +1,4 @@
-# LASR Cards - Software Development Risks
+# LASR Cards
 
 ## Table of Contents
 
