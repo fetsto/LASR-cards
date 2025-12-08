@@ -1,0 +1,6 @@
+{
+  "number": "AC-15",
+  "title": "Prompt jailbreaks and data leakage",
+  "category": "Agentic Development Know-how",
+  "description": "Is it easy to (accidentially) leak data, bypass guardrails or tunnel harmful commands through prompts? Do logs, telemetry or MCP memories expose secrets to external LLM services?"
+}

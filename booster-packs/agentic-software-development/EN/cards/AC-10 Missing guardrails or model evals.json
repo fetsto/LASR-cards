@@ -1,0 +1,6 @@
+{
+  "number": "AC-10",
+  "title": "Missing guardrails or model evals",
+  "category": "Tests and Guardrails",
+  "description": "Do conceptual regressions or architectural drift go unnoticed because of missing guardrails or tests? Are quality, security or performance characteristics of used AI models only checked manually?"
+}

@@ -1,0 +1,6 @@
+{
+  "number": "AC-17",
+  "title": "Over-reliance on generators",
+  "category": "Soft Factors and Processes",
+  "description": "Does heavy use of AI reduce deep understanding of the codebase and the quality of manual reviews? Is there over-confidence in AI \"sparring partners\" or blind trust in AI output?"
+}

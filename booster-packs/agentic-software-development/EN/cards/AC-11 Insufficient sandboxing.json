@@ -1,0 +1,6 @@
+{
+  "number": "AC-11",
+  "title": "Insufficient sandboxing",
+  "category": "Tests and Guardrails",
+  "description": "Are critical systems, data or credentials exposed to AI-driven tools and agents in some way? Can simple mistakes or prompt exploits turn into serious security, stability or data protection incidents?"
+}
