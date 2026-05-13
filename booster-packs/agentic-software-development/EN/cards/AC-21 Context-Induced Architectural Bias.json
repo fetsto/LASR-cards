@@ -1,6 +1,6 @@
 {
   "number": "AC-21",
   "title": "Context-Induced Architectural Bias",
-  "category": "Developed Solution",
+  "category": "Soft Factors and Processes",
   "description": "Do prompts, specs, examples or generated architecture notes over-prime agents toward accidental technical solutions? Are agents preserving structures because they appeared in context, rather than because they reflect deliberate architectural decisions?"
 }
