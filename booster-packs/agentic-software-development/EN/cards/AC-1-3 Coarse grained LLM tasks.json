@@ -1,5 +1,5 @@
 {
-  "number": "AC-03",
+  "number": "AC-1-3",
   "title": "Coarse grained LLM tasks",
   "category": "LLM-usage",
   "description": "Are tasks given to LLMs too big or underspecified, so that superficial designs, placeholders or dummy implementations are common? Are hidden defects often discovered late or require rework?"

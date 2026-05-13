@@ -1,5 +1,5 @@
 {
-  "number": "AC-20",
+  "number": "AC-7-3",
   "title": "Hidden / Inconsistent Architecture Decisions",
   "category": "Developed Solution",
   "description": "Are architectural decisions made or implied inside prompts, specs, tickets, pull requests or chats without being captured as explicit, durable decision artifacts? Is it hard to reconstruct what was decided, why and under which assumptions?"

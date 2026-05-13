@@ -2,29 +2,31 @@
 
 ## Table of Contents
 
-- [AC-01 Non-deterministic outputs](#ac01-non-deterministic-outputs)
-- [AC-02 Unclear code provenance](#ac02-unclear-code-provenance)
-- [AC-03 Coarse grained LLM tasks](#ac03-coarse-grained-llm-tasks)
-- [AC-04 Unsupervised agent swarms](#ac04-unsupervised-agent-swarms)
-- [AC-05 Overly loose permissions](#ac05-overly-loose-permissions)
-- [AC-06 Documentation bloat](#ac06-documentation-bloat)
-- [AC-07 Overloaded LLM context](#ac07-overloaded-llm-context)
-- [AC-08 Tool-driven design](#ac08-tool-driven-design)
-- [AC-09 Feature bloat through speed](#ac09-feature-bloat-through-speed)
-- [AC-10 Missing guardrails or model evals](#ac10-missing-guardrails-or-model-evals)
-- [AC-11 Insufficient sandboxing](#ac11-insufficient-sandboxing)
-- [AC-12 Unmanaged bias and harmful content](#ac12-unmanaged-bias-and-harmful-content)
-- [AC-13 Careless innovation](#ac13-careless-innovation)
-- [AC-14 Overly complex AI dev setups](#ac14-overly-complex-ai-dev-setups)
-- [AC-15 Prompt jailbreaks and data leakage](#ac15-prompt-jailbreaks-and-data-leakage)
-- [AC-16 Missing AI usage standards](#ac16-missing-ai-usage-standards)
-- [AC-17 Over-reliance on generators](#ac17-over-reliance-on-generators)
-- [AC-18 Design and concept drift](#ac18-design-and-concept-drift)
-- [AC-19 Superficial or outdated solutions](#ac19-superficial-or-outdated-solutions)
+- [AC-1-1 Non-deterministic outputs](#ac-1-1-non-deterministic-outputs)
+- [AC-1-2 Unclear code provenance](#ac-1-2-unclear-code-provenance)
+- [AC-1-3 Coarse grained LLM tasks](#ac-1-3-coarse-grained-llm-tasks)
+- [AC-2-1 Unsupervised agent swarms](#ac-2-1-unsupervised-agent-swarms)
+- [AC-2-2 Overly loose permissions](#ac-2-2-overly-loose-permissions)
+- [AC-2-3 Documentation bloat](#ac-2-3-documentation-bloat)
+- [AC-3-1 Overloaded LLM context](#ac-3-1-overloaded-llm-context)
+- [AC-3-2 Tool-driven design](#ac-3-2-tool-driven-design)
+- [AC-3-3 Feature bloat through speed](#ac-3-3-feature-bloat-through-speed)
+- [AC-4-1 Missing guardrails or model evals](#ac-4-1-missing-guardrails-or-model-evals)
+- [AC-4-2 Insufficient sandboxing](#ac-4-2-insufficient-sandboxing)
+- [AC-4-3 Unmanaged bias and harmful content](#ac-4-3-unmanaged-bias-and-harmful-content)
+- [AC-5-1 Careless innovation](#ac-5-1-careless-innovation)
+- [AC-5-2 Overly complex AI dev setups](#ac-5-2-overly-complex-ai-dev-setups)
+- [AC-5-3 Prompt jailbreaks and data leakage](#ac-5-3-prompt-jailbreaks-and-data-leakage)
+- [AC-6-1 Missing AI usage standards](#ac-6-1-missing-ai-usage-standards)
+- [AC-6-2 Over-reliance on generators](#ac-6-2-over-reliance-on-generators)
+- [AC-6-3 Context-Induced Architectural Bias](#ac-6-3-context-induced-architectural-bias)
+- [AC-7-1 Design and concept drift](#ac-7-1-design-and-concept-drift)
+- [AC-7-2 Superficial or outdated solutions](#ac-7-2-superficial-or-outdated-solutions)
+- [AC-7-3 Hidden / Inconsistent Architecture Decisions](#ac-7-3-hidden--inconsistent-architecture-decisions)
 
 ---
 
-## AC-01 Non-deterministic outputs
+## AC-1-1 Non-deterministic outputs
 
 **Category:** LLM-usage
 
@@ -32,7 +34,7 @@ Is the non-deterministic nature of LLMs problematic? Are solutions, tests, trace
 
 ---
 
-## AC-02 Unclear code provenance
+## AC-1-2 Unclear code provenance
 
 **Category:** LLM-usage
 
@@ -40,7 +42,7 @@ Is there organizational uncertainty concerning copyrights, third-party licences 
 
 ---
 
-## AC-03 Coarse grained LLM tasks
+## AC-1-3 Coarse grained LLM tasks
 
 **Category:** LLM-usage
 
@@ -48,7 +50,7 @@ Are tasks given to LLMs too big or underspecified, so that superficial designs, 
 
 ---
 
-## AC-04 Unsupervised agent swarms
+## AC-2-1 Unsupervised agent swarms
 
 **Category:** Gen-AI Autonomy
 
@@ -56,7 +58,7 @@ Do autonomous multi-agent chains run without clear limits, supervision or cost c
 
 ---
 
-## AC-05 Overly loose permissions
+## AC-2-2 Overly loose permissions
 
 **Category:** Gen-AI Autonomy
 
@@ -64,7 +66,7 @@ Do agents have shell, cloud or production access beyond what they really need? C
 
 ---
 
-## AC-06 Documentation bloat
+## AC-2-3 Documentation bloat
 
 **Category:** Gen-AI Autonomy
 
@@ -72,7 +74,7 @@ Is documentation largely auto-generated descriptions of implementation details, 
 
 ---
 
-## AC-07 Overloaded LLM context
+## AC-3-1 Overloaded LLM context
 
 **Category:** Goals and Context
 
@@ -80,7 +82,7 @@ Do excessive context enrichment, careless information feeding or long-lived memo
 
 ---
 
-## AC-08 Tool-driven design
+## AC-3-2 Tool-driven design
 
 **Category:** Goals and Context
 
@@ -88,7 +90,7 @@ Does enthusiasm for AI tools push considerations around requirements, goals and 
 
 ---
 
-## AC-09 Feature bloat through speed
+## AC-3-3 Feature bloat through speed
 
 **Category:** Goals and Context
 
@@ -96,7 +98,7 @@ Is AI-augmented implemention deemed so "cheap", that requirements are less thoro
 
 ---
 
-## AC-10 Missing guardrails or model evals
+## AC-4-1 Missing guardrails or model evals
 
 **Category:** Tests and Guardrails
 
@@ -104,7 +106,7 @@ Do conceptual regressions or architectural drift go unnoticed because of missing
 
 ---
 
-## AC-11 Insufficient sandboxing
+## AC-4-2 Insufficient sandboxing
 
 **Category:** Tests and Guardrails
 
@@ -112,7 +114,7 @@ Are critical systems, data or credentials exposed to AI-driven tools and agents 
 
 ---
 
-## AC-12 Unmanaged bias and harmful content
+## AC-4-3 Unmanaged bias and harmful content
 
 **Category:** Tests and Guardrails
 
@@ -120,7 +122,7 @@ Do discriminatory, offensive or otherwise harmful output patterns go unchecked? 
 
 ---
 
-## AC-13 Careless innovation
+## AC-5-1 Careless innovation
 
 **Category:** Agentic Development Know-how
 
@@ -128,7 +130,7 @@ Does the perceived ease of change with AI tools encourage risky experiments or t
 
 ---
 
-## AC-14 Overly complex AI dev setups
+## AC-5-2 Overly complex AI dev setups
 
 **Category:** Agentic Development Know-how
 
@@ -136,7 +138,7 @@ Are agent frameworks, tools and pipelines so complex or opaque that devs cannot 
 
 ---
 
-## AC-15 Prompt jailbreaks and data leakage
+## AC-5-3 Prompt jailbreaks and data leakage
 
 **Category:** Agentic Development Know-how
 
@@ -144,7 +146,7 @@ Is it easy to (accidentially) leak data, bypass guardrails or tunnel harmful com
 
 ---
 
-## AC-16 Missing AI usage standards
+## AC-6-1 Missing AI usage standards
 
 **Category:** Soft Factors and Processes
 
@@ -152,7 +154,7 @@ Is the usage of Gen-AI tools and approaches mainly up to personal preferance or 
 
 ---
 
-## AC-17 Over-reliance on generators
+## AC-6-2 Over-reliance on generators
 
 **Category:** Soft Factors and Processes
 
@@ -160,7 +162,15 @@ Does heavy use of AI reduce deep understanding of the codebase and the quality o
 
 ---
 
-## AC-18 Design and concept drift
+## AC-6-3 Context-Induced Architectural Bias
+
+**Category:** Soft Factors and Processes
+
+Do prompts, specs, examples or generated architecture notes over-prime agents toward accidental technical solutions? Are agents preserving structures because they appeared in context, rather than because they reflect deliberate architectural decisions?
+
+---
+
+## AC-7-1 Design and concept drift
 
 **Category:** Developed Solution
 
@@ -168,7 +178,7 @@ Do agents or generators possibly dilute the architectural style or let patterns 
 
 ---
 
-## AC-19 Superficial or outdated solutions
+## AC-7-2 Superficial or outdated solutions
 
 **Category:** Developed Solution
 
@@ -176,3 +186,10 @@ Are agents able to generate solutions that look plausible but are shallow or unp
 
 ---
 
+## AC-7-3 Hidden / Inconsistent Architecture Decisions
+
+**Category:** Developed Solution
+
+Are architectural decisions made or implied inside prompts, specs, tickets, pull requests or chats without being captured as explicit, durable decision artifacts? Is it hard to reconstruct what was decided, why and under which assumptions?
+
+---

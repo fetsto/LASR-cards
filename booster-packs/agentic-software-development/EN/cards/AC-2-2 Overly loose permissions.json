@@ -1,5 +1,5 @@
 {
-  "number": "AC-05",
+  "number": "AC-2-2",
   "title": "Overly loose permissions",
   "category": "Gen-AI Autonomy",
   "description": "Do agents have shell, cloud or production access beyond what they really need? Can misused privileges or simple prompt mistakes delete data, break systems or leak sensitive information?"

@@ -1,5 +1,5 @@
 {
-  "number": "AC-12",
+  "number": "AC-4-3",
   "title": "Unmanaged bias and harmful content",
   "category": "Tests and Guardrails",
   "description": "Do discriminatory, offensive or otherwise harmful output patterns go unchecked? Are controls for bias and problematic content in code, tests, workflows or documentation manual or sketchy?"

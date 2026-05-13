@@ -1,5 +1,5 @@
 {
-  "number": "AC-02",
+  "number": "AC-1-2",
   "title": "Unclear code provenance",
   "category": "LLM-usage",
   "description": "Is there organizational uncertainty concerning copyrights, third-party licences or patents that apply to code created with Gen-AI? Can IP grey zones lead to legal and compliance issues?"

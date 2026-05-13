@@ -1,5 +1,5 @@
 {
-  "number": "AC-10",
+  "number": "AC-4-1",
   "title": "Missing / obsolete guardrails or evals",
   "category": "Tests and Guardrails",
   "description": "Can AI-made changes violate architectural rules, quality goals, or system constraints without being caught? Have existing tests, checks, evals, or harnesses become stale, misleading, or easy to bypass?"
