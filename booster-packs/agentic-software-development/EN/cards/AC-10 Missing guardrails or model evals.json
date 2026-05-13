@@ -1,6 +1,6 @@
 {
   "number": "AC-10",
-  "title": "Missing guardrails or model evals",
+  "title": "Missing / obsolete guardrails or evals",
   "category": "Tests and Guardrails",
-  "description": "Do conceptual regressions or architectural drift go unnoticed because of missing guardrails or tests? Are quality, security or performance characteristics of used AI models only checked manually?"
+  "description": "Can AI-made changes violate architectural rules, quality goals, or system constraints without being caught? Have existing tests, checks, evals, or harnesses become stale, misleading, or easy to bypass?"
 }

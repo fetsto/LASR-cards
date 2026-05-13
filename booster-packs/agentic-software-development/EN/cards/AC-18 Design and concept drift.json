@@ -2,5 +2,5 @@
   "number": "AC-18",
   "title": "Design and concept drift",
   "category": "Developed Solution",
-  "description": "Do agents or generators possibly dilute the architectural style or let patterns and conventions fade over time? This can erode the original design, confuse devs and threaten consistency and correctness."
+  "description": "Can AI-supported dilute the architectural style or let patterns and conventions fade over time? Is this drift potentially faster than review cadences can detect? This can erode the original design, confuse devs and threaten consistency and correctness."
 }
